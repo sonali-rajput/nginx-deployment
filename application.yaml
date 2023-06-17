@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: myapp-argo-application
   namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: autmoation-devops-infrastructure
+    notifications.argoproj.io/subscribe.on-deployed.slack: autmoation-devops-infrastructure
 spec:
   project: default
 
